@@ -1,0 +1,18 @@
+[package]
+name = "pedersen-bench"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+criterion = "0.5.1"
+pathfinder-crypto = { git = "https://github.com/eqlabs/pathfinder/", version = "0.11.3" }
+# stark-felt = { git = "https://github.com/starknet-io/types-rs" }
+starknet-types-core = { git = "https://github.com/starknet-io/types-rs", version = "0.0.9", default-features = false, features = ["serde", "hash"] }
+stark-felt = "0.0.1"
+rand = "0.8.5"
+
+[[bench]]
+name = "criterion_pedersen"
+harness = false
